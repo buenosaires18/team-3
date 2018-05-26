@@ -1,11 +1,11 @@
 <?php
 session_start();
-$user = "39906650";
-//$user = $_SESSION['usuario'];
+//$user = "39906650";
+$user = $_SESSION['usuario'];
 try{
     $bandera=0;
     $usuario='root';
-    $clave='';
+    $clave='team3db';
     $objetoPDO = new PDO('mysql:host=localhost;dbname=pescardb;charset=utf8', $usuario, $clave);
     $sql=$objetoPDO->prepare('SELECT * FROM `personas` WHERE `dni` = :usuario');
     $sql->bindValue(':usuario', $user);

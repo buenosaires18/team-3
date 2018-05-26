@@ -1,7 +1,7 @@
     <?php
     session_start();
     $usuario = 'root';
-    $clave = '';
+    $clave = 'team3db';
     $usuarioPost = $_POST['usuario'];
     $passPost = $_POST['password'];
 
