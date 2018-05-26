@@ -4,6 +4,8 @@ xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
 xmlhttp.send();
 xmlhttp.onreadystatechange = function () {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        console.log(xmlhttp.responseText);
+        
         const objeto = JSON.parse(xmlhttp.responseText);
             document.getElementById("nombre").innerHTML=`${objeto.nombre} ${objeto.apellido}`;
             document.getElementById("intereses").innerHTML=`Tecnologia - Desarrollar mi carrera - Programacion`;
