@@ -10,7 +10,7 @@
 
  $sql->bindParam(':id',$usuarioPost,PDO::PARAM_INT);
  $sql->bindParam(':password',$passPost,PDO::PARAM_STR);
- $sql->execute()
+ $sql->execute();
  while($objUsuario=$sql->fetch(PDO::FETCH_LAZY))
  {
      if($objUsuario->usuario==$usuarioPost && $objUsuario->password==$passPost){
