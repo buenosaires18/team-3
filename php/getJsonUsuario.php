@@ -1,6 +1,6 @@
 <?php
 session_start();
-$usuario = 39906650;
+$user = "39906650";
 //$usuario = $_SESSION['usuario'];
 try{
     $bandera=0;
@@ -8,9 +8,9 @@ try{
     $clave='';
     $objetoPDO = new PDO('mysql:host=localhost;dbname=pescardb;charset=utf8', $usuario, $clave);
     $sql=$objetoPDO->prepare('SELECT * FROM `personas` WHERE `dni` = :usuario');
-    $sql->bindValue(':usuario', $usuario);
+    $sql->bindValue(':usuario', $user);
     $sql->execute();
-    while($result = $sql->fetchObject()){
+    if($result = $sql->fetchObject()){
         echo var_dump($result);
         $bandera=1;
     }
