@@ -19,12 +19,13 @@
 
     <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/addNewMessage.js"></script>
 
     <title>Tu Perfil</title>
   </head>
   <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
-        <a class="navbar-brand" href="#">Pescar</a>
+        <a class="navbar-brand" href="./index.html">Pescar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,30 +33,16 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio</a>
+              <a class="nav-link" href="./index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tu Perfil<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="./profile.html">Tu Perfil<span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
       </nav>
       <br>
       
-        <form class="container-fluid" action="./php/administrar.php" method="POST">
-
-            <div class="col-sm-12" style="">
-
-                <input type="file" name="imagenPostEmpresa" id="">
-                <input type="text" name="tituloPostEmpresa" id="" placeholder="Titulo">
-                <input type="text" name="textoPostEmpresa" id="" placeholder="Texto">
-                <br>
-                <button type="submit" >Compartir</button>
-            
-            </div>
-
-        </form>
-      <hr>
       <section id="posteos" class="container">
 
         <div class="postUsuario row" id="newsfeed" style="background-color: rgb(216, 216, 216)">
@@ -126,25 +113,26 @@
       </section>
 
       <div class="btn-group container-fluid" style="float: right">
-            <button class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="fa fa-comments pull-left">Chat
-            </button>
-            <ul class="dropdown-menu pb-chat-dropdown">
-                <li>
-                    <div class="panel panel-info pb-chat-panel">
-                        <div class="panel panel-heading pb-chat-panel-heading">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <a href="#">
-                                        <label id="support_label">Lorem support</label>
-                                    </a>
-                                    <a href="#"><span class="fa fa-cog pull-right pb-chat-top-icons"></span></a>
-                                    <a href="#"><span class="fa fa-share pull-right pb-chat-top-icons"></span></a>
-                                </div>
+        <button class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="fa fa-comments pull-left">Chat
+        </button>
+        <ul class="dropdown-menu pb-chat-dropdown">
+            <li>
+                <div class="panel panel-info pb-chat-panel">
+                    <div class="panel panel-heading pb-chat-panel-heading">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a href="#">
+                                    <label id="support_label">Lorem support</label>
+                                </a>
+                                <a href="#"><span class="fa fa-cog pull-right pb-chat-top-icons"></span></a>
+                                <a href="#"><span class="fa fa-share pull-right pb-chat-top-icons"></span></a>
                             </div>
                         </div>
-                        <div class="panel-body">
-                            <form id="chatBox">
+                    </div>
+                    <div class="panel-body">
+                        
+                            <div id="chatBox">
                                 <div class="form-group">
                                     <span class="fa fa-lg fa-user pb-chat-fa-user"></span><span class="label label-default pb-chat-labels pb-chat-labels-left">Hola! como estas?</span>
                                 </div>
@@ -167,23 +155,31 @@
                                     <span class="label label-primary pb-chat-labels pb-chat-labels-primary">I'm busy hanging out :D</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
                                 </div>
                                 <div class="clearfix"></div>
-                                <div class="panel-footer">
-                                        <div class="row">
-                                            <div class="col-xs-10">
-                                                <textarea id="entryMessage" class="form-control pb-chat-textarea" placeholder="Escriba su mensaje aqui"></textarea>
-                                            </div>
-                                            <div class="col-xs-2" style="padding-right: 10px">
-                                                <button class=""><span class="">Enviar</span></button>
-                                            </div>
-                                        </div>
+                                <div id="nuevosMensajes">
+
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                            
+                            <div class="clearfix"></div>
+                            <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-10">
+                                            <textarea id="entryMessage" class="form-control pb-chat-textarea" placeholder="Escriba su mensaje aqui"></textarea>
+                                        </div>
+                                        <div class="col-xs-2" style="padding-right: 10px">
+                                            <button class="" onclick="addMessage()">
+                                                <span class="">Enviar</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                            </div>
                         
                     </div>
-                </li>
-            </ul>
-        </div>
+                    
+                </div>
+            </li>
+        </ul>
+    </div>
 
       <!--  -->
 
