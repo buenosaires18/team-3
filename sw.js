@@ -1,9 +1,17 @@
 const staticAssets = [
-    './',
-    './styles.css',
-    './app.js',
-    './fallback.json',
-    './images/fetch-dog.jpg'
+    './cargarPost.html',
+    './chartPescar.html',
+    './formCompletar.html',
+    './index.html',
+    './profile.html',
+    './login/login.html',
+    './Template-ChatTemplate/index.html',
+    './js/addNewMessage.js',
+    './js/ajax.js',
+    './js/cargarNewsFeed.js',
+    './js/chat.js',
+    './css/estilos.css',
+    './css/styles.css'
 ]
 
 self.addEventListener('install', async event => {

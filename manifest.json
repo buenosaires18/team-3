@@ -1,11 +1,11 @@
 {
-  "name": "News",
-  "short_name": "News",
-  "theme_color": "#bccddb",
-  "background_color": "#73777a",
+  "name": "Pescar",
+  "short_name": "Pescar",
+  "theme_color": "#d95151",
+  "background_color": "#f76f6f",
   "display": "standalone",
-  "Scope": "/",
-  "start_url": "/",
+  "Scope": "./team-3",
+  "start_url": "./team-3/login.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
