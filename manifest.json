@@ -4,8 +4,8 @@
   "theme_color": "#d95151",
   "background_color": "#f76f6f",
   "display": "standalone",
-  "Scope": "./team-3",
-  "start_url": "./team-3/login.html",
+  "Scope": "/testpwa",
+  "start_url": "/testpwa/toLogin.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
