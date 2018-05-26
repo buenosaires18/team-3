@@ -15,6 +15,9 @@
 
     <script src="./js/cargarNewsFeed.js"></script>
 
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
     <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
     <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
     <!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
@@ -208,7 +211,7 @@
 -->
       
       <div class="btn-group container-fluid" style="float: right">
-            <button class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button class="btn btn-primary dropdown-toggle btn-lg dropdown.keep-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <span class="fa fa-comments pull-left">Chat
             </button>
             <ul  class="dropdown-menu pb-chat-dropdown">
@@ -287,5 +290,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  </body>
+    <script>
+        
+        $('.dropdown.keep-open').on({
+            "shown.bs.dropdown": function() { this.closable = false; },
+            "click":             function() { this.closable = false; },
+            "hide.bs.dropdown":  function() { return this.closable; }
+        });
+
+    </script>
+</body>
 </html>
