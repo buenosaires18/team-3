@@ -1,5 +1,5 @@
 document.getElementById("nombre").innerHTML+=`Carlos Perez`;
-document.getElementById("ID").innerHTML+=`41459399`;
+document.getElementById("dni").innerHTML+=`41459399`;
 document.getElementById("intereses").innerHTML=`Gastronomia`;
 document.getElementById("nacimiento").innerHTML+=`24/02/2000`;
 document.getElementById("sexo").innerHTML+=`Hombre`;
