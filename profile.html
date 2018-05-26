@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
     <!-- Bootstrap CSS -->
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -63,6 +66,8 @@
             <div class="card-footer text-muted" id="ultimaConexion">
               Ultima conexion
             </div>
+
+            
           
           <div class="card">
             <div class="card-body">
@@ -76,10 +81,90 @@
           <a href="login/login.html" class="card-link mx-auto">Salir</a>
 
         </div>
+
+        <!-- START OF CHAT -->
+
+      <div  class="btn-group container-fluid dropdown keep-open" style="float: left">
+          <button class="btn btn-primary dropdown-toggle btn-lg " data-spy="affix" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <span class="fa fa-comments pull-left">Chat
+          </button>
+          <ul  class="dropdown-menu pb-chat-dropdown ">
+              <li>
+                  <div class="panel panel-info pb-chat-panel">
+                      <div class="panel panel-heading pb-chat-panel-heading">
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <a href="#">
+                                      <label style="padding-left: 30px" id="support_label">Mariana Diaz</label>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="panel-body">
+                          
+                              <div id="chatBox"  style="overflow-y: scroll; height: 300px">
+                                  <div style="padding-left: 30px; padding-right: 30px; background-color: rgb(253, 221, 184)" class="form-group">
+                                      <span class=""></span><span class="">Hola! como estas?</span>
+                                  </div>
+                                  <hr>
+                                  <div style="padding-left: 30px; padding-right: 30px; background-color: rgb(255, 255, 255)" class="">
+                                      <span class="">Hola, bien y vos?</span><span class=""></span>
+                                  </div>
+                                  <div style="padding-left: 30px; padding-right: 30px" class="clearfix"></div>
+                                  <hr>
+                                  <div style="padding-left: 30px; padding-right: 30px; background-color: rgb(253, 221, 184)" class="form-group">
+                                      <span class=""></span><span class="">Todo genial, escuchaste del proximo meetup?</span>
+                                  </div>
+                                  <hr>
+                                  <div style="padding-left: 30px; padding-right: 30px; background-color: rgb(255, 255, 255)" class="">
+                                      <span class="">No, contame ;)</span><span class=""></span>
+                                  </div>
+                                  <div style="padding-left: 30px; padding-right: 30px" class="clearfix"></div>
+                                  <hr>
+                                  <div style="padding-left: 30px; padding-right: 30px; background-color: rgb(255, 255, 255)" class="">
+                                      <span class="">Si es como la anterior va a ser buenisimo :D</span><span class=""></span>
+                                  </div>
+                                  <div class="clearfix"></div>
+                                  <div id="nuevosMensajes">
+                                      
+                                  </div>
+                              </div>
+                              
+                              <div class="clearfix"></div>
+                              <div style="margin-left: 15px" class="panel-footer">
+                                      <div class="row">
+                                          <div class="col-xs-10">
+                                              <textarea id="entryMessage" style="padding-left: 20px" class="form-control pb-chat-textarea" placeholder="Escriba su mensaje aqui"></textarea>
+                                          </div>
+                                          <div class="col-xs-2" style="padding-right: 15px; padding-left: 25px; padding-top: 15px">
+                                              <button class="btn" style="padding-right: 10px; padding-left: 10px; background-color: rgb(252, 127, 44)" onclick="addMessage()">
+                                                  <span style="color: antiquewhite">Enviar</span>
+                                              </button>
+                                          </div>
+                                      </div>
+                              </div>
+                          
+                      </div>
+                      
+                  </div>
+              </li>
+          </ul>
+      </div>
+
+    <!-- END OF CHAT -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/ajax.js"></script>
 
+      <script>
+      $('.dropdown.keep-open').on({
+            "shown.bs.dropdown": function() { this.closable = false; },
+            "click":             function() { this.closable = false; },
+            "blur": 						 function() { this.closable = true; },
+            "focusout": 						 function() { this.closable = true; },
+            "hide.bs.dropdown":  function() { return this.closable; }
+        });
+      </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
