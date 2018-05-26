@@ -16,7 +16,7 @@ class Usuario{
     public $apellido;
     public $escuela;
 
-    public function __construct($dni,$nombre,$apellido,$escuela,$password){
+    public function __construct($dni,$nombre, $apellido, $fechaNacimiento, $nacionalidad, $email, $twitter, $instagram, $linkedin, $calle, $ciudad, $provincia, $codigoPostal, $celular, $apellido, $escuela){
     $this->dni = $dni;
     $this->nombre = $nombre;
     $this->fechaNacimiento = $fechaNacimiento;
