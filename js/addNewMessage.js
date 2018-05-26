@@ -4,7 +4,8 @@
 
 function addMessage() {
 
-    let message = document.getElementById('entryMessage').value;
+    let textBox = document.getElementById('entryMessage');
+    let message = textBox.value
 
     //Create and add element
     /*var toAddDiv =  document.createElement('div');
@@ -20,6 +21,6 @@ function addMessage() {
     <span class="label label-primary pb-chat-labels pb-chat-labels-primary">${message}</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
     </div><div class="clearfix"></div>`;
 
-    message.value = "Escriba su mensaje aqui";
+    textBox.value = "";
 
 }
