@@ -144,7 +144,7 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                            <form>
+                            <form id="chatBox">
                                 <div class="form-group">
                                     <span class="fa fa-lg fa-user pb-chat-fa-user"></span><span class="label label-default pb-chat-labels pb-chat-labels-left">Hola! como estas?</span>
                                 </div>
@@ -167,18 +167,19 @@
                                     <span class="label label-primary pb-chat-labels pb-chat-labels-primary">I'm busy hanging out :D</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
                                 </div>
                                 <div class="clearfix"></div>
+                                <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-xs-10">
+                                                <textarea id="entryMessage" class="form-control pb-chat-textarea" placeholder="Escriba su mensaje aqui"></textarea>
+                                            </div>
+                                            <div class="col-xs-2" style="padding-right: 10px">
+                                                <button class=""><span class="">Enviar</span></button>
+                                            </div>
+                                        </div>
+                                </div>
                             </form>
                         </div>
-                        <div class="panel-footer">
-                            <div class="row">
-                                <div class="col-xs-10">
-                                    <textarea class="form-control pb-chat-textarea" placeholder="Type your message here..."></textarea>
-                                </div>
-                                <div class="col-xs-2 pb-btn-circle-div">
-                                    <button class="btn btn-primary btn-circle pb-chat-btn-circle"><span class="fa fa-chevron-right"></span></button>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </li>
             </ul>
