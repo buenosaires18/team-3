@@ -7,17 +7,17 @@ xmlhttp.onreadystatechange = function () {
         console.log(xmlhttp.responseText);
         
         const objeto = JSON.parse(xmlhttp.responseText);
-            document.getElementById("nombre").innerHTML+=`${objeto.nombre} ${objeto.apellido}`;
-            document.getElementById("intereses").innerHTML=`Tecnologia - Desarrollar mi carrera - Programacion`;
-            document.getElementById("nacimiento").innerHTML+=`${objeto.fechaNacimiento}`;
+            document.getElementById("nombre").innerHTML+=`Carlos Perez`;
+            document.getElementById("intereses").innerHTML=`Gastronomia`;
+            document.getElementById("nacimiento").innerHTML+=`24/02/2000`;
             document.getElementById("sexo").innerHTML+=`Hombre`;
-            document.getElementById("escuela").innerHTML+=`${objeto.escuela}`;
-            document.getElementById("domicilio").innerHTML+=`${objeto.calle}`;
-            document.getElementById("ciudad").innerHTML+=`${objeto.ciudad}`;
-            document.getElementById("provincia").innerHTML+=`${objeto.provincia}`;
-            document.getElementById("celular").innerHTML+=`${objeto.celular}`;
-            document.getElementById("instagram").innerHTML+=`${objeto.instagram}`;
-            document.getElementById("twitter").innerHTML+=`${objeto.twitter}`;
-            document.getElementById("linkedin").innerHTML+=`${objeto.linkedin}`;
+            document.getElementById("escuela").innerHTML+=`San Belgrano N10`
+            document.getElementById("domicilio").innerHTML+=`Martinez 2100`;
+            document.getElementById("ciudad").innerHTML+=`Villa Urquiza`;
+            document.getElementById("provincia").innerHTML+=`CABA`;
+            document.getElementById("celular").innerHTML+=`CABA`;
+            document.getElementById("instagram").innerHTML+=`CarLopez`;
+            document.getElementById("twitter").innerHTML+=`CarlosPerez`;
+            document.getElementById("linkedin").innerHTML+=`CarlosPerez`;
     }
 };
