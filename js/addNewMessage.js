@@ -1,8 +1,10 @@
 //get & replace to default
+
+
+
 function addMessage() {
 
-    const message=document.getElementById("entryMessage");
-    message.innerHTML+=`Escribi tu mensaje aqui`;
+    let message = document.getElementById('entryMessage').value;
 
     //Create and add element
     /*var toAddDiv =  document.createElement('div');
@@ -13,8 +15,9 @@ function addMessage() {
 
     document.getElementById("chatBox").appendChild(toAdd);*/
 
-    document.getElementById('form-group').innerHTML+=`<div class="form-group pull-right pb-chat-labels-right">
+    let nuevoMensaje = document.getElementById('nuevosMensajes').innerHTML+=`
+    <hr><div class="form-group pull-right pb-chat-labels-right">
     <span class="label label-primary pb-chat-labels pb-chat-labels-primary">${message}</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
-    </div>`;
+    </div><div class="clearfix"></div>`;
 
 }
