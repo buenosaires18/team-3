@@ -1,24 +1,25 @@
-<?php
- session_start();
- $usuario='root';
- $clave='';
- $objetoPDO = new PDO('mysql:host=localhost;dbname=pescardb;charset=utf8', $usuario, $clave);
- $usuarioPost=$_POST['usuario'];
- $passPost=$_POST['password'];
+    <?php
+    session_start();
+    $usuario = 'root';
+    $clave = '';
+    $usuarioPost = $_POST['usuario'];
+    $passPost = $_POST['password'];
 
- $sql=$objetoPDO->prepare('SELECT id,password FROM login WHERE id=:id AND password=:password');
+    $objetoPDO = new PDO('mysql:host=localhost;dbname=pescardb;charset=utf8', $usuario, $clave);
+    $sql = $objetoPDO->prepare('SELECT `usuario`,`password` FROM `login` WHERE `usuario` = :usuario AND `password` = :password');
+    $sql->bindValue(':usuario', $usuarioPost);
+    $sql->bindValue(':password', $passPost);
+    $sql->execute();
 
- $sql->bindParam(':id',$usuarioPost,PDO::PARAM_INT);
- $sql->bindParam(':password',$passPost,PDO::PARAM_STR);
- $sql->execute();
- while($objUsuario=$sql->fetch(PDO::FETCH_LAZY))
- {
-     echo var_dump($objUsuario);
-     if($objUsuario->usuario==$usuarioPost && $objUsuario->password==$passPost){
-         header('Location: ./index.html');
-     }
- }
- 
-/*  header('Location: ../login/login.html'); */
+    $dataUsuario=$sql->fetchObject();
 
-?>
+    $resultado = $sql->rowCount();
+    if ($resultado) {
+        $_SESSION['usuario']=$dataUsuario->usuario;
+        header('Location: ../index.html');
+    } else {
+        header('Location: ../login/login.html');
+    } 
+    /*  header('Location: ../login/login.html'); */
+
+    ?>
