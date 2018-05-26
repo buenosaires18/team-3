@@ -1,10 +1,8 @@
 <?php
 class Usuario{
     public $nombre;
-    public $password;
 
-    public function __construct($nombre,$password){
+    public function __construct($nombre){
         $this->nombre=$nombre;
-        $this->password=$password;
     }
 }

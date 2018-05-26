@@ -25,14 +25,19 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 <!--===============================================================================================-->
 </head>
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+		<div class="container-fluid" style="align-content: center">
+			<div class="col-xs-12 mx-auto col-md-4 col-lg-4 col-xl-4">
+				<form action="../php/administrar.php" method="POST">
 					<span class="login100-form-title p-b-26">
 						Bienvenido
 					</span>
@@ -40,27 +45,27 @@
 						<img src="./images/icons/pescarLogo.png" alt="Logo Pescar">
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" type="text" name="usuario">
-						<span class="focus-input100" data-placeholder="usuario"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
-						</span>
-						<input class="input100" type="password" name="password">
-						<span class="focus-input100" data-placeholder="Contraseña"></span>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								Ingresar
-							</button>
+						<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+							<input class="input100" type="text" name="usuario">
+							<span class="focus-input100" data-placeholder="Usuario"></span>
 						</div>
-					</div>
+			
+						<div class="wrap-input100 validate-input" data-validate="Enter password">
+							<span class="btn-show-pass">
+								<i class="zmdi zmdi-eye"></i>
+							</span>
+							<input class="input100" type="password" name="password">
+							<span class="focus-input100" data-placeholder="Contraseña"></span>
+						</div>
+			
+						<div class="container-login100-form-btn">
+							<div class="wrap-login100-form-btn">
+								<div class="login100-form-bgbtn"></div>
+								<button type="submit" class="login100-form-btn" >
+									Ingresar
+								</button>
+							</div>
+						</div>
 
 					<div class="text-center p-t-115">
 						<span class="txt1">
