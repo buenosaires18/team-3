@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-05-2018 a las 04:52:56
+-- Tiempo de generación: 26-05-2018 a las 05:00:28
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `pescardb`
 --
+CREATE DATABASE IF NOT EXISTS `pescardb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `pescardb`;
 
 -- --------------------------------------------------------
 
@@ -85,6 +87,13 @@ CREATE TABLE `personas` (
   `apellido` varchar(65) NOT NULL,
   `escuela` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `personas`
+--
+
+INSERT INTO `personas` (`dni`, `nombre`, `fechaNacimiento`, `nacionalidad`, `email`, `twitter`, `instagram`, `linkedin`, `calle`, `ciudad`, `provincia`, `codigoPostal`, `celular`, `apellido`, `escuela`) VALUES
+(39906650, 'Francisco', '1996-09-02', 'Argentino', 'imarealstudent@realmail.com', 'frandim', 'frandim', 'frandim', 'caboto', 'caba', 'caba', 1153, 1121552123, 'di marzo', 'carlos pellegrini');
 
 --
 -- Índices para tablas volcadas
