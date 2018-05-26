@@ -13,21 +13,18 @@
   </head>
   <body>
     <div class="card mb-3 col-md-7 mt-3 mx-auto" >
-        <form action="" method="POST">
+        <form action=./php/postSubmit.php method="POST">
             <fieldset>
               <legend>Nuevo post</legend>
               <div class="form-group">
                   <label for="exampleInputEmail1">Nombre Empresa</label>
-                  <input type="email" class="form-control" id="empresa" name="empresa" aria-describedby="emailHelp" placeholder="Nombre empresa">
+                  <input type="text" class="form-control" id="empresa" name="empresa" aria-describedby="emailHelp" placeholder="Nombre empresa">
                 </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Post</label>
-                <input type="email" class="form-control" id="posteo" name="posteo" aria-describedby="emailHelp" placeholder="Tu post">
+                <input type="text" class="form-control" id="posteo" name="posteo" aria-describedby="emailHelp" placeholder="Tu post">
               </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Fecha</label>
-                <input type="text" class="form-control" id="fecha" name="fecha" readonly>
-              </div>
+
               <button type="submit" class="btn btn-primary mb-3">Submit</button>
 
           </form>
