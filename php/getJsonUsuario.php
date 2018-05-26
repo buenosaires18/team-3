@@ -11,7 +11,7 @@ try{
     $sql->bindValue(':usuario', $user);
     $sql->execute();
     if($result = $sql->fetchObject()){
-        echo var_dump($result);
+        echo json_encode($result);
         $bandera=1;
     }
     if($bandera==0)
