@@ -14,7 +14,8 @@ xmlhttp.onreadystatechange = function () {
                 <h5 class="card-title">${userPub.titulo}</h5>
                 <p class="card-text">${userPub.texto}</a>
             </div>
-        </div>`;
+            </div>`
+        ;
         }
     }
 };
