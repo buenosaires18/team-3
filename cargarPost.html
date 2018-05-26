@@ -23,19 +23,14 @@
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link active" href="#">Inicio</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="profile.html">Tu Perfil</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="cargarPost.html">Cargar Post</a>
               </li>
             </ul>
           </div>
         </nav>
     <div class="card mb-3 col-md-7 mt-3 mx-auto" >
-        <form action=./php/postSubmit.php method="POST">
+        <form action="#" method="POST">
             <fieldset>
               <legend>Nuevo post</legend>
               <div class="form-group">
@@ -50,8 +45,28 @@
               <button type="submit" class="btn btn-primary mb-3">Submit</button>
 
           </form>
+          <section id="posteos" class="container">
 
+            <div class="postUsuario row" id="newsfeed" style="background-color: rgb(216, 216, 216)">
+    
+                <div class="card col-sm-12" style="width: 100%;padding-left: 5%; padding-right: 5%">
+    
+                    <img class="card-img-top" id="postImagen" src="./images/defaultCoding.jpeg" alt="Card image cap">
+    
+                    <div class="card-bodys" item-width="100%">
+                        <h5 class="card-title" id="postTitulo">Busquedas laborales en JP Morgan</h5>
+                        <p class="card-text" id="postTexto">Te capacitamos en JP Morgan para la parte de desarrollo...</p>
+                        <div align="right">
+                          <a href="#" class="btn btn-success">Mas informacion</a>
+                          <a href="#" class="btn btn-warning">Modificar</a>                        
+                          <a href="#" class="btn btn-danger">Eliminar</a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
     </div>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <link rel="stylesheet" href="css/styles.css">
