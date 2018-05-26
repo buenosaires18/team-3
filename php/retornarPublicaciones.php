@@ -1,5 +1,4 @@
 <?php
-$fecha = date("m-d-y");
 try{
     $bandera=0;
     $usuario='root';
@@ -11,8 +10,7 @@ try{
         return json_encode($result);
         $bandera=1;
     }
-    if($bandera==0)
-    {
+    if($bandera==0){
         echo "No se encontro el usuario";
     }
 }
