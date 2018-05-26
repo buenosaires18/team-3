@@ -2,12 +2,6 @@
 <html lang="en">
   <head>
 
-    <!-- Chat -->
-
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,6 +11,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/estilos.css">
+
+    <script src="./js/cargarNewsFeed.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 
     <title>Tu Perfil</title>
   </head>
@@ -123,119 +125,66 @@
 
       </section>
 
-
-      <div class="container text-center">
-            <div class="row">
-                <div class="round hollow text-center">
-                <a href="#" id="addClass"><span class="glyphicon glyphicon-comment"></span> Open in chat </a>
-                </div>
-                
-                <hr>
-                
-                MORE :
-                <a target="_blank" href="http://bootsnipp.com/snippets/33ejn">Whatsapp Chat Box POPUP</a>,
-                 <a target="_blank" href="http://bootsnipp.com/snippets/z4P39"> Creative User Profile  </a>
-                 
-            </div>
+      <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="fa fa-comments pull-left">Chat
+            </button>
+            <ul class="dropdown-menu pb-chat-dropdown">
+                <li>
+                    <div class="panel panel-info pb-chat-panel">
+                        <div class="panel panel-heading pb-chat-panel-heading">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a href="#">
+                                        <label id="support_label">Lorem support</label>
+                                    </a>
+                                    <a href="#"><span class="fa fa-cog pull-right pb-chat-top-icons"></span></a>
+                                    <a href="#"><span class="fa fa-share pull-right pb-chat-top-icons"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <div class="form-group">
+                                    <span class="fa fa-lg fa-user pb-chat-fa-user"></span><span class="label label-default pb-chat-labels pb-chat-labels-left">Hi, how are you?</span>
+                                </div>
+                                <hr>
+                                <div class="form-group pull-right pb-chat-labels-right">
+                                    <span class="label label-primary pb-chat-labels pb-chat-labels-primary">Hi, i'm fine, you?</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
+                                </div>
+                                <div class="clearfix"></div>
+                                <hr>
+                                <div class="form-group">
+                                    <span class="fa fa-lg fa-user pb-chat-labels pb-chat-fa-user"></span><span class="label label-default pb-chat-labels pb-chat-labels-left">I'm great, wanna hangout?</span>
+                                </div>
+                                <hr>
+                                <div class="form-group pull-right pb-chat-labels-right">
+                                    <span class="label label-primary pb-chat-labels pb-chat-labels-primary">No, huehuehue</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
+                                </div>
+                                <div class="clearfix"></div>
+                                <hr>
+                                <div class="form-group pull-right pb-chat-labels-right">
+                                    <span class="label label-primary pb-chat-labels pb-chat-labels-primary">I'm busy hanging out :D</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <textarea class="form-control pb-chat-textarea" placeholder="Type your message here..."></textarea>
+                                </div>
+                                <div class="col-xs-2 pb-btn-circle-div">
+                                    <button class="btn btn-primary btn-circle pb-chat-btn-circle"><span class="fa fa-chevron-right"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        
-        
-        <div class="popup-box chat-popup" id="qnimate">
-            <div class="popup-head">
-                <div class="popup-head-left pull-left"><img src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" alt="iamgurdeeposahan"> Gurdeep Osahan</div>
-                    <div class="popup-head-right pull-right">
-                        <div class="btn-group">
-                            <button class="chat-header-button" data-toggle="dropdown" type="button" aria-expanded="false">
-                                <i class="glyphicon glyphicon-cog"></i> </button>
-                                    <ul role="menu" class="dropdown-menu pull-right">
-                                        <li><a href="#">Media</a></li>
-                                        <li><a href="#">Block</a></li>
-                                        <li><a href="#">Clear Chat</a></li>
-                                        <li><a href="#">Email Chat</a></li>
-                                    </ul>
-                        </div>
-                                
-                        <button data-widget="remove" id="removeClass" class="chat-header-button pull-right" type="button"><i class="glyphicon glyphicon-off"></i></button>
-                    </div>
-                </div>
-                <div class="popup-messages">
-                    
-                    <div class="direct-chat-messages">
-                            
-                        <div class="chat-box-single-line">
-                            <abbr class="timestamp">October 8th, 2015</abbr>
-                        </div>
-                                
-                        <!-- Message. Default to the left -->
-                        <div class="direct-chat-msg doted-border">
-                            <div class="direct-chat-info clearfix">
-                                <span class="direct-chat-name pull-left">Osahan</span>
-                            </div>
-                            <!-- /.direct-chat-info -->
-                            <img alt="message user image" src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img"><!-- /.direct-chat-img -->
-                            <div class="direct-chat-text">
-                                Hey bro, how’s everything going ?
-                            </div>
-                            <div class="direct-chat-info clearfix">
-                                <span class="direct-chat-timestamp pull-right">3.36 PM</span>
-                            </div>
-                            <div class="direct-chat-info clearfix">
-                                <span class="direct-chat-img-reply-small pull-left">
-                                </span>
-                                <span class="direct-chat-reply-name">Singh</span>
-                            </div>
-                            <!-- /.direct-chat-text -->
-                        </div>
-                            <!-- /.direct-chat-msg -->
-                            
-                        <div class="chat-box-single-line">
-                            <abbr class="timestamp">October 9th, 2015</abbr>
-                        </div>
-                    
-                            
-                            
-                        <!-- Message. Default to the left -->
-                        <div class="direct-chat-msg doted-border">
-                            <div class="direct-chat-info clearfix">
-                                <span class="direct-chat-name pull-left">Osahan</span>
-                            </div>
-                            <!-- /.direct-chat-info -->
-                            <img alt="iamgurdeeposahan" src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img"><!-- /.direct-chat-img -->
-                            <div class="direct-chat-text">
-                                Hey bro, how’s everything going ?
-                            </div>
-                            <div class="direct-chat-info clearfix">
-                                <span class="direct-chat-timestamp pull-right">3.36 PM</span>
-                            </div>
-                            <div class="direct-chat-info clearfix">
-                                <img alt="iamgurdeeposahan" src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img big-round">
-                                <span class="direct-chat-reply-name">Singh</span>
-                            </div>
-                            <!-- /.direct-chat-text -->
-                        </div>
-                        <!-- /.direct-chat-msg -->
-        
-                    </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                </div>
-                <div class="popup-messages-footer">
-                    <textarea id="status_message" placeholder="Type a message..." rows="10" cols="40" name="message"></textarea>
-                    <div class="btn-footer">
-                        <button class="bg_none"><i class="glyphicon glyphicon-film"></i> </button>
-                        <button class="bg_none"><i class="glyphicon glyphicon-camera"></i> </button>
-                        <button class="bg_none"><i class="glyphicon glyphicon-paperclip"></i> </button>
-                        <button class="bg_none pull-right"><i class="glyphicon glyphicon-thumbs-up"></i> </button>
-                    </div>
-                </div>
-            </div>
+
+      <!--  -->
 
     <!-- Optional JavaScript -->
 
