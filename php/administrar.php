@@ -18,7 +18,7 @@
      }
      else
      {
-         header('Location: localhost/team-3/login.html');
+         header('Location: localhost/team-3/login/login.html');
      }
  }
 

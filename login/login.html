@@ -25,22 +25,25 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 <!--===============================================================================================-->
 </head>
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+		<div class="container-fluid" style="align-content: center">
+			<div class="col-xs-12 mx-auto col-md-4 col-lg-4 col-xl-4">
+				<form action="../php/administrar.php" method="POST">
 					<span class="login100-form-title p-b-26">
 						Bienvenido
 					</span>
 					<span class="login100-form-title p-b-48">
 						<img src="./images/icons/pescarLogo.png" alt="Logo Pescar">
 					</span>
-
-					<form action="../php/administrar.php" method="post">
 
 						<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
 							<input class="input100" type="text" name="usuario">
@@ -58,13 +61,11 @@
 						<div class="container-login100-form-btn">
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
-								<button class="login100-form-btn">
+								<button type="submit" class="login100-form-btn" >
 									Ingresar
 								</button>
 							</div>
 						</div>
-
-					</form>
 
 					<div class="text-center p-t-115">
 						<span class="txt1">
