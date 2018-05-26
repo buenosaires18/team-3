@@ -1,7 +1,7 @@
 <?php
 session_start();
 $user = "39906650";
-//$usuario = $_SESSION['usuario'];
+//$user = $_SESSION['usuario'];
 try{
     $bandera=0;
     $usuario='root';
