@@ -1,5 +1,5 @@
 <?php
-class Usuario{
+class Persona{
     public $dni;
     public $nombre;
     public $fechaNacimiento;
