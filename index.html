@@ -210,11 +210,11 @@
         </div>
 -->
       
-      <div class="btn-group container-fluid" style="float: right">
-            <button class="btn btn-primary dropdown-toggle btn-lg dropdown.keep-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <div class="btn-group container-fluid dropdown keep-open" style="float: right">
+            <button class="btn btn-primary dropdown-toggle btn-lg " data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <span class="fa fa-comments pull-left">Chat
             </button>
-            <ul  class="dropdown-menu pb-chat-dropdown">
+            <ul  class="dropdown-menu pb-chat-dropdown ">
                 <li>
                     <div class="panel panel-info pb-chat-panel">
                         <div class="panel panel-heading pb-chat-panel-heading">
@@ -295,6 +295,8 @@
         $('.dropdown.keep-open').on({
             "shown.bs.dropdown": function() { this.closable = false; },
             "click":             function() { this.closable = false; },
+            "blur": 						 function() { this.closable = true; },
+            "focusout": 						 function() { this.closable = true; },
             "hide.bs.dropdown":  function() { return this.closable; }
         });
 
