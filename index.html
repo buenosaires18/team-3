@@ -101,6 +101,8 @@
 
       </section>
       
+      <!-- START OF CHAT -->
+
       <div  class="btn-group container-fluid dropdown keep-open" style="float: left">
             <button class="btn btn-primary dropdown-toggle btn-lg " data-spy="affix" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <span class="fa fa-comments pull-left">Chat
@@ -121,12 +123,12 @@
                         </div>
                         <div class="panel-body">
                             
-                                <div id="chatBox">
+                                <div id="chatBox"  style="overflow-y: scroll; height: 300px">
                                     <div style="padding-left: 30px; padding-right: 30px; background-color: rgb(253, 221, 184)" class="form-group">
                                         <span class="fa fa-lg fa-user pb-chat-fa-user"></span><span class="label label-default pb-chat-labels pb-chat-labels-left">Hola! como estas?</span>
                                     </div>
                                     <hr>
-                                    <div style="padding-left: 30px; padding-right: 30px" class="form-group pull-right pb-chat-labels-right">
+                                    <div style="padding-left: 30px; padding-right: 30px; background-color: rgb(255, 255, 255)" class="form-group pull-right pb-chat-labels-right">
                                         <span class="label label-primary pb-chat-labels pb-chat-labels-primary">Hola, bien y vos?</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
                                     </div>
                                     <div style="padding-left: 30px; padding-right: 30px" class="clearfix"></div>
@@ -135,13 +137,13 @@
                                         <span class="fa fa-lg fa-user pb-chat-labels pb-chat-fa-user"></span><span class="label label-default pb-chat-labels pb-chat-labels-left">Todo genial, escuchaste del proximo meetup?</span>
                                     </div>
                                     <hr>
-                                    <div style="padding-left: 30px; padding-right: 30px" class="form-group pull-right pb-chat-labels-right">
+                                    <div style="padding-left: 30px; padding-right: 30px; background-color: rgb(255, 255, 255)" class="form-group pull-right pb-chat-labels-right">
                                         <span class="label label-primary pb-chat-labels pb-chat-labels-primary">No, contame ;)</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
                                     </div>
                                     <div style="padding-left: 30px; padding-right: 30px" class="clearfix"></div>
                                     <hr>
-                                    <div style="padding-left: 30px; padding-right: 30px" class="form-group pull-right pb-chat-labels-right">
-                                        <span class="label label-primary pb-chat-labels pb-chat-labels-primary">I'm busy hanging out :D</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
+                                    <div style="padding-left: 30px; padding-right: 30px; background-color: rgb(255, 255, 255)" class="form-group pull-right pb-chat-labels-right">
+                                        <span class="label label-primary pb-chat-labels pb-chat-labels-primary">Si es como la anterior va a ser buenisimo :D</span><span class="fa fa-lg fa-user pb-chat-fa-user"></span>
                                     </div>
                                     <div class="clearfix"></div>
                                     <div id="nuevosMensajes">
@@ -150,14 +152,14 @@
                                 </div>
                                 
                                 <div class="clearfix"></div>
-                                <div class="panel-footer">
+                                <div style="margin-left: 15px" class="panel-footer">
                                         <div class="row">
                                             <div class="col-xs-10">
-                                                <textarea id="entryMessage" class="form-control pb-chat-textarea" placeholder="Escriba su mensaje aqui"></textarea>
+                                                <textarea id="entryMessage" style="padding-left: 20px" class="form-control pb-chat-textarea" placeholder="Escriba su mensaje aqui"></textarea>
                                             </div>
-                                            <div class="col-xs-2" style="padding-right: 10px">
-                                                <button class="" style="padding-right: 10px" onclick="addMessage()">
-                                                    <span class="">Enviar</span>
+                                            <div class="col-xs-2" style="padding-right: 15px; padding-left: 25px; padding-top: 15px">
+                                                <button class="btn" style="padding-right: 10px; padding-left: 10px; background-color: rgb(252, 127, 44)" onclick="addMessage()">
+                                                    <span style="color: antiquewhite">Enviar</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -172,7 +174,7 @@
 
         
 
-      <!--  -->
+      <!-- END OF CHAT -->
 
     <!-- Optional JavaScript -->
 
