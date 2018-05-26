@@ -33,4 +33,8 @@ class Persona{
     $this->apellido = $apellido;
     $this->escuela = $escuela;
     }
+
+    public function ToJson(){
+        return json_encode($this);
+    }
 }
