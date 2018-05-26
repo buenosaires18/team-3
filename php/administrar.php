@@ -13,10 +13,12 @@
  $sql->execute();
  while($objUsuario=$sql->fetch(PDO::FETCH_LAZY))
  {
+     echo var_dump($objUsuario);
      if($objUsuario->usuario==$usuarioPost && $objUsuario->password==$passPost){
-         header('Location: localhost/team-3/index.html');
+         header('Location: ./index.html');
      }
  }
- header('Location: localhost/team-3/login/login.html');
+ 
+/*  header('Location: ../login/login.html'); */
 
 ?>
